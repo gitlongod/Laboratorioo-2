@@ -41,7 +41,8 @@ static void ShowMenu()
 			case 3:
 			break;	
 			case 4:
-			break;
+            Console.WriteLine();
+            break;
 			case 5:
 			break;
 	}
