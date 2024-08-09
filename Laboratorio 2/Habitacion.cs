@@ -168,18 +168,33 @@ namespace Laboratorio_2
            Console.WriteLine("Ingrese el número de la habitación que desea asignar");
             int asingRoom = int.Parse(Console.ReadLine());  
             Habitacion room = roomList.Find(p=>p.Numero == asingRoom);
-            if (room != null&& room.Cliente == available) 
+            if (room != null) 
             {
                 Console.WriteLine("Ingrese el Nombre del Cliente");
                 string cliente = Console.ReadLine();
                 room.Cliente = cliente;
                 room.Availability = notAvailable;
+                Console.WriteLine("Habitación asignada correctamente");
                 Console.ReadKey();
             }
             else
             {
                 Console.WriteLine("No se ha encontrado el número de habitación");
                 Console.ReadKey();
+            }
+        }
+        public static void FreeRoom(ref List<Habitacion> roomList, ref string notAvailable, ref string available)
+        {
+            Console.WriteLine("Ingrese el número de la habitación que quiere liberar");
+            int freRoom = int.Parse(Console.ReadLine());
+            Habitacion room = roomList.Find(p=> p.Numero == freRoom);
+            if (room != null) 
+            {
+                room.Cliente = "";
+                room.Availability = available;
+                Console.WriteLine("La habitación se ha liberado correctamente");
+                Console.ReadKey();
+
             }
         }
     }

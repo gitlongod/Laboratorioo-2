@@ -54,9 +54,10 @@ static void ShowMenu(ref List<Habitacion> roomList,ref string available, ref str
 				Habitacion.ShowInfoRoom(ref roomList);
 			break;	
 			case 4:
-		Habitacion.AsingRoom(ref roomList,ref notAvailable);
+		Habitacion.AsingRoom(ref roomList,ref notAvailable,ref available);
             break;
 			case 5:
+			Habitacion.FreeRoom(ref roomList,ref notAvailable,ref available);
 			break;
 	}
 }
