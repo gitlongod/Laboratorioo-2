@@ -8,7 +8,7 @@ namespace Laboratorio_2
 {
     public class Suite: Habitacion
     {
-        public Suite(int numero, double price, string availability, string cliente): base(numero, price, availability, cliente) 
+        public Suite(int numero, double price, string availability, string cliente,string type): base(numero, price, availability, cliente, type) 
         {
 
         }

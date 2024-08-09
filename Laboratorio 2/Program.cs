@@ -2,10 +2,11 @@
 using Laboratorio_2;
 using System.Collections.Generic;
 using System.Globalization;
-string disponibilidad = "";
+
 string available = "Disponible";
 string notAvailable = "No Disponible";
 bool generalContinue = true;
+
 	
 List<Habitacion> roomList = new List<Habitacion>();
 
@@ -14,7 +15,7 @@ do
 {
 	try
 	{
-			ShowMenu(ref roomList,ref disponibilidad, ref available,ref notAvailable);
+			ShowMenu(ref roomList,ref available,ref notAvailable);
 	}
 	catch (Exception ex)
 	{
@@ -37,7 +38,7 @@ static int Menu()
 	return option;
 	
 }
-static void ShowMenu(ref List<Habitacion> roomList, ref string disponibilidad,ref string available, ref string notAvailable)
+static void ShowMenu(ref List<Habitacion> roomList,ref string available, ref string notAvailable)
 {
 	switch (Menu())
 	{
@@ -50,10 +51,10 @@ static void ShowMenu(ref List<Habitacion> roomList, ref string disponibilidad,re
 			
 			break;
 			case 3:
-			Habitacion.ShowRooms(ref roomList);	
+				Habitacion.ShowInfoRoom(ref roomList);
 			break;	
 			case 4:
-			Habitacion.ChangeAvaible(ref roomList,ref disponibilidad, ref available,ref notAvailable);
+		Habitacion.AsingRoom(ref roomList,ref notAvailable);
             break;
 			case 5:
 			break;

@@ -8,9 +8,10 @@ namespace Laboratorio_2
 {
     public class Habitacion_doble : Habitacion
     {
-        public Habitacion_doble(int numero, double price, string availability, string cliente): base(numero,price,availability,cliente)
+        public Habitacion_doble(int numero, double price, string availability, string cliente,string type): base(numero,price,availability,cliente,type)
         {
 
         }
+
     }
 }
